@@ -15,9 +15,12 @@ const SignUpSchema = z.object({
 
 export type SignUpFormProps = z.infer<typeof SignUpSchema>
 
-export const SignUp: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>> }> = ({ setWindow }) => {
+export const SignUp: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>>,  setBackground: Dispatch<SetStateAction<boolean>>}> = ({ setWindow, setBackground }) => {
   const toggleWindow = () => {
-    setWindow('sign-in')
+    setBackground(background => !background)
+    setTimeout(()=> {
+      setWindow('sign-in')
+    }, 500)
   }
   const { register, handleSubmit, setValue, formState: { errors } } = useForm<SignUpFormProps>({
     resolver: zodResolver(SignUpSchema),

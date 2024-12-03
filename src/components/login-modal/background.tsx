@@ -1,7 +1,7 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
 
-export const LoginBackground = ({ handler }: { handler: string }) => {
+export const LoginBackground = ({ handler }: { handler: boolean }) => {
   const controls = useAnimationControls()
 
   const animateLoginBackground = async () => {

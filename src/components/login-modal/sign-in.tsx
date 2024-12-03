@@ -3,9 +3,12 @@ import { WindowStateProps } from "."
 import { motion } from "framer-motion"
 import { LoginInput } from "./input"
 
-export const SignIn: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>> }> = ({ setWindow }) => {
+export const SignIn: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>>,  setBackground: Dispatch<SetStateAction<boolean>>}> = ({ setWindow, setBackground }) => {
   const toggleWindow = () => {
-    setWindow('sign-up')
+    setBackground(background => !background)
+    setTimeout(() => {
+      setWindow('sign-up')
+    }, 500)
   }
   return (
     <div className="relative px-4 py-10 bg-neutral-900 shadow-lg sm:rounded-3xl sm:p-20">
