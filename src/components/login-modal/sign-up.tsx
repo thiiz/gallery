@@ -39,10 +39,10 @@ export const SignUp: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>> 
         </div>
         <div className="divide-y divide-gray-200">
           <form onSubmit={handleSubmit(onSubmit)} className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-            <LoginInput register={register('user')} autoComplete="on" type="text" label="Usuário" />
-            <LoginInput register={register('email')} autoComplete="on" type="email" label="Endereço de email" />
-            <LoginInput register={register('password')} autoComplete="off" type="password" label="Senha" />
-            <LoginInput register={register('confirmPass')} autoComplete="off" type="password" label="Confirmar senha" />
+            <LoginInput /*register={register('user')}*/ autoComplete="on" type="text" label="Usuário" />
+            <LoginInput /*register={register('email')}*/ autoComplete="on" type="email" label="Endereço de email" />
+            <LoginInput /*register={register('password')}*/ autoComplete="off" type="password" label="Senha" />
+            <LoginInput /*register={register('confirmPass')}*/ autoComplete="off" type="password" label="Confirmar senha" />
             <div className="relative">
               <button className="bg-gradient-to-l from-amber-300 to-amber-600 text-sm font-semibold text-white rounded-md w-full py-2">SIGNIN</button>
             </div>

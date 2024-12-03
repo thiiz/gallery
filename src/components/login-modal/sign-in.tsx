@@ -15,8 +15,8 @@ export const SignIn: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>> 
         </div>
         <div className="divide-y divide-gray-200">
           <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-            <LoginInput autoComplete="on" label="Endereço de email" register={() => { }} type="email" />
-            <LoginInput autoComplete="off" label="Senha" register={() => { }} type="password" />
+            <LoginInput autoComplete="on" label="Endereço de email" /*register={() => { }}*/ type="email" />
+            <LoginInput autoComplete="off" label="Senha" /*register={() => { }}*/ type="password" />
             <div className="relative">
               <button className="bg-gradient-to-l from-amber-300 to-amber-600 text-sm font-semibold text-white rounded-md w-full py-2">SIGNIN</button>
             </div>
