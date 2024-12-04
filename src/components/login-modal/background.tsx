@@ -29,7 +29,7 @@ export const LoginBackground = ({ handler }: { handler: boolean }) => {
 
   return (
     <motion.div
-      className="absolute inset-0 bg-gradient-to-r from-amber-300 to-amber-600 shadow-lg transform sm:rounded-3xl"
+      className="absolute inset-0 bg-gradient-to-r from-amber-300 to-amber-600 shadow-lg transform rounded-3xl"
       animate={controls}
       exit={{ opacity: 0 }}
     ></motion.div>

@@ -35,7 +35,7 @@ export const SignUp: FC<{ setWindow: Dispatch<SetStateAction<WindowStateProps>>,
     return
   }
   return (
-    <div className="relative px-4 py-10 bg-neutral-900 shadow-lg sm:rounded-3xl sm:p-20">
+    <div className="relative min-w-[85vw] md:min-w-full p-10 bg-neutral-900 shadow-lg rounded-3xl sm:p-20">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ delay: .55 }} className="max-w-md">
         <div>
           <h1 className="text-2xl font-semibold">Login Form with Floating Labels</h1>
