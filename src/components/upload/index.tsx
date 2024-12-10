@@ -37,7 +37,7 @@ export const Upload = () => {
         {images && images.length > 0 && (
         <div className='w-screen h-screen bg-black/40 z-40 left-0'>
           {images.map((image, index) => (
-            <div className='relative w-40 h-40'>
+            <div key={image} className='relative w-40 h-40'>
               <Image src={`
                 https://drive.usercontent.google.com/download?id=${image}&export=view`} alt={`Imagem ${index + 1}`} fill onError={() => setImageError(true)} />
                 </div>
