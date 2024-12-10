@@ -5,14 +5,14 @@ import { useEffect, useState } from 'react';
 import useDrivePicker from 'react-google-drive-picker'
 
 export const Upload = () => {
-  const [images, setImages] = useState([]);  
+  const [images, setImages] = useState<string[]>([]);  
   const [imageError, setImageError] = useState(false);  
   const [openPicker, authResponse] = useDrivePicker();  
   // const customViewsArray = [new google.picker.DocsView()]; // custom view
   const handleOpenPicker = () => {
     openPicker({
-      clientId: '841323749227-ipk4eqfu6vjkrrvta6h2rqht91qho4eg.apps.googleusercontent.com', 
-      developerKey: 'AIzaSyB2imbPujyCmH5NZpq5tFerjGKweVKP_0E', 
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_GOOGLE_CLIENT_ID!, 
+      developerKey: process.env.NEXT_PUBLIC_GOOGLE_DEVELOPER_KEY!, 
       viewId: "DOCS",
       // token: token, // pass oauth token in case you already have one
       showUploadView: false,
