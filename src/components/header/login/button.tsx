@@ -14,7 +14,6 @@ import { getServerSession } from "next-auth"
 
 export const LoginButton = async () => {
   const session = await getServerSession() 
-  console.log(session)
   return (
     <>
     {!session ? 
